@@ -106,7 +106,7 @@ class Client(object):
         do_next()
 
     @coroutine
-    def connect(self):
+    def connect(self, reconnect=None):
         """Connect to beanstalkd server."""
         if not self.closed():
             return
